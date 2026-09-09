@@ -25,10 +25,21 @@
 3. 아래 "출력 형식"대로 Word 문서(.docx)를 생성한다 (python-docx 또는 docx npm
    패키지 등 이미 설치되어 있거나 설치 가능한 라이브러리 사용).
 4. 완성된 .docx를 `analysis/`에 저장한다.
-5. git add/commit/push까지 수행한다.
+5. git add/commit/push는 다음 규칙을 따른다.
+   - 절대 `git add .` (전체 추가)를 쓰지 않는다. 회사 보안 프로그램(Fasoo DRM)이
+     기존 파일들을 암호화해서 내용을 바꿔놓을 수 있기 때문에, 반드시 이번에
+     새로 만들거나 수정한 파일만 경로를 지정해서 add한다.
+     예: git add analysis/새파일명.docx
+         git add papers/새파일명.pdf
+   - 새 분석 파일을 만들어 처음 커밋/푸시한 직후에는, 그 파일이 다시는
+     자동으로 add 대상이 되지 않도록 아래 명령을 실행해 git에서
+     "추적하되 변경 무시" 상태로 표시해둔다.
+     git update-index --assume-unchanged <방금 추가한 파일 경로>
+   - git status로 변경사항을 사람에게 보여줄 때도, assume-unchanged 처리된
+     파일은 어차피 목록에 안 뜨니 신경쓰지 않는다.
    - 커밋 메시지 형식: `analysis: <특허/논문 제목 또는 번호> 분석 추가`
-   - push 전에 항상 `git status`와 diff 요약을 사람에게 보여주고, **명시적으로 승인받은 뒤**
-     push한다 (자동으로 push하지 말 것).
+   - push 전에 항상 `git status`와 diff 요약을 사람에게 보여주고,
+     명시적으로 승인받은 뒤 push한다 (자동으로 push하지 말 것).
 
 ## 출력 형식 (Word 문서, 항상 이 순서와 제목 사용)
 ### 0. 문서 개요
