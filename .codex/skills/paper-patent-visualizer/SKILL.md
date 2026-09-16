@@ -1,6 +1,6 @@
 ---
 name: paper-patent-visualizer
-description: Analyze technical paper or patent PDFs, especially semiconductor process and equipment documents, and produce a Korean Word report plus source-grounded diagrams. Use when a user asks to analyze, compare, explain, or visualize PDFs in papers/ or another supplied location. Do not use for legal infringement or validity opinions.
+description: Sync a requested local paper or patent PDF into Git when needed, analyze semiconductor process and equipment documents, and produce a Korean Word report plus source-grounded diagrams. Use when a user asks to find, analyze, compare, explain, or visualize a PDF in papers/ or another supplied location. Do not use for legal infringement or validity opinions.
 ---
 
 # Paper Patent Visualizer
@@ -14,6 +14,20 @@ Turn a technical PDF into an evidence-traceable Korean explanation and a small s
 3. Check for an existing report or visual directory. Do not replace an existing analysis without explicit approval.
 4. Preserve the source PDF. Use a temporary directory for page renders, OCR, and extraction intermediates.
 5. In the `study` repository, write ChatGPT/Codex results under `analysis_GPT/`. Treat `analysis/` as another agent's output and do not modify it unless the user explicitly asks.
+
+## Sync a local `papers/` PDF before analysis
+
+When the user says that a PDF was placed in the PC's local `papers/` folder, perform this sequence before reading the paper:
+
+1. Confirm that the active workspace is the user's local `study` Git checkout and that its `papers/` directory is readable. Do not claim access to a Windows path merely because the user named it; if the local checkout is not mounted or opened, ask the user to open it in Codex or upload/push the PDF.
+2. Find the requested PDF by normalized title, filename fragment, DOI, patent number, or other identifier. Search only filenames first. If exactly one file matches, use it. If multiple files plausibly match, show their filenames and ask the user to choose.
+3. Validate that the selected file is a readable PDF, then run `git status --short -- <exact-pdf-path>` to determine whether it is untracked or modified.
+4. If the PDF is already committed and the working copy is unchanged, skip the source push and continue to analysis.
+5. If the PDF is new or modified, stage only that exact PDF path. Never use `git add .`, `git add papers`, a wildcard, or any command that stages unrelated files. Show `git status` and a staged diff summary, commit it with `papers: <document title or filename> 추가`, and request explicit approval immediately before pushing, as required by the repository instructions.
+6. Push the source-PDF commit before starting the analysis. If the push fails, preserve the commit, report the blocker, and do not pretend the remote repository contains the file.
+7. After a successful source push, analyze the same local PDF and save all ChatGPT/Codex outputs under `analysis_GPT/`. Follow the repository's separate approval rule before pushing the finished analysis.
+
+Do not upload every file in `papers/` merely because the user said “papers 폴더 푸시.” Interpret that phrase as synchronizing the requested analysis source while preserving unrelated local files.
 
 ## Source extraction
 
