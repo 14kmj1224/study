@@ -1,0 +1,48 @@
+{
+  "document": {
+    "type": "US granted patent",
+    "number": "US11942308B2",
+    "title": "Microwave Plasma Source, Microwave Plasma Processing Apparatus and Plasma Processing Method",
+    "assignee": "Tokyo Electron Limited",
+    "patent_date": "2024-03-26",
+    "relationship": "Divisional of US application 15/882,028, now US11056317"
+  },
+  "findings": [
+    {
+      "finding": "Conventional reflection-wave and tuner-position monitoring may miss unexpected matching or micro-discharge in the antenna path.",
+      "source": "PDF pp.9-10 and p.14",
+      "kind": "document_fact",
+      "confidence": "high"
+    },
+    {
+      "finding": "A thermocouple is placed through the coaxial inner conductor so its measurement point is near connector 70 and cap 72 close to slot antenna 62.",
+      "source": "PDF pp.13-14, Fig. 5",
+      "kind": "document_fact",
+      "confidence": "high"
+    },
+    {
+      "finding": "The example uses a warning above 150 C for at least 2 seconds and an alarm above 300 C for at least 2 seconds.",
+      "source": "PDF pp.13 and 15",
+      "kind": "experimental_condition",
+      "confidence": "high"
+    },
+    {
+      "finding": "At 3.0 kW, Ant-2 reached 162.7 C, above the 150 C warning threshold, and later showed abnormal discharge evidence.",
+      "source": "PDF p.15, Fig. 6",
+      "kind": "experimental_result",
+      "confidence": "high"
+    },
+    {
+      "finding": "Temperature is used as a leading indicator for ignition failure, complementing conventional microwave parameter monitoring.",
+      "source": "PDF pp.14-16, claim 1",
+      "kind": "document_conclusion",
+      "confidence": "high"
+    },
+    {
+      "finding": "The disclosed experiment alone does not establish false-positive rate, sensor response across other tools, or a universal threshold.",
+      "source": "Analyst assessment based on the limited experiment in PDF p.15",
+      "kind": "analyst_interpretation",
+      "confidence": "medium"
+    }
+  ]
+}

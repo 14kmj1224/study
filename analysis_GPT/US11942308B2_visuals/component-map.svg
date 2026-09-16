@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">마이크로파 전달 경로와 온도센서 위치</title>
+  <desc id="desc">마이크로파 발생부에서 처리 공간까지의 전달 경로와 커넥터 및 캡 부근 열전대 위치를 나타낸 재구성도</desc>
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#245678"/></marker>
+    <marker id="r" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#C53932"/></marker>
+    <style>text{font-family:"Noto Sans CJK KR","Noto Sans KR","Malgun Gothic",Arial,sans-serif;fill:#172B3A}.t{font-size:32px;font-weight:700}.h{font-size:21px;font-weight:700}.b{font-size:17px}.s{font-size:14px;fill:#526A78}</style>
+  </defs>
+  <rect width="1400" height="760" fill="#F7FAFC"/>
+  <text x="60" y="58" class="t">마이크로파 전달 경로와 이상 감지 위치</text>
+  <text x="60" y="92" class="b" fill="#526A78">정상 에너지 경로는 파란색, 이상 감지 신호는 빨간색</text>
+
+  <g>
+    <rect x="60" y="145" width="190" height="90" rx="16" fill="#E7F0F6" stroke="#245678" stroke-width="2"/>
+    <text x="155" y="180" text-anchor="middle" class="h">마이크로파 발생부</text><text x="155" y="211" text-anchor="middle" class="b">69</text>
+    <rect x="300" y="145" width="190" height="90" rx="16" fill="#E7F0F6" stroke="#245678" stroke-width="2"/>
+    <text x="395" y="180" text-anchor="middle" class="h">사각 도파관</text><text x="395" y="211" text-anchor="middle" class="b">67 · TE 모드</text>
+    <rect x="540" y="145" width="190" height="90" rx="16" fill="#E7F0F6" stroke="#245678" stroke-width="2"/>
+    <text x="635" y="180" text-anchor="middle" class="h">모드 변환기</text><text x="635" y="211" text-anchor="middle" class="b">66 · TE → TEM</text>
+    <rect x="780" y="145" width="190" height="90" rx="16" fill="#E7F0F6" stroke="#245678" stroke-width="2"/>
+    <text x="875" y="180" text-anchor="middle" class="h">동축 도파관</text><text x="875" y="211" text-anchor="middle" class="b">65 · TEM 모드</text>
+    <rect x="1020" y="145" width="310" height="90" rx="16" fill="#DDF5FB" stroke="#1595B7" stroke-width="3"/>
+    <text x="1175" y="180" text-anchor="middle" class="h">안테나부 → 처리 공간</text><text x="1175" y="211" text-anchor="middle" class="b">63 → 62 → 61 → 표면파 플라즈마</text>
+    <path d="M250 190H292M490 190H532M730 190H772M970 190H1012" stroke="#245678" stroke-width="4" marker-end="url(#a)"/>
+  </g>
+
+  <rect x="675" y="315" width="400" height="330" rx="24" fill="#FFFFFF" stroke="#B8CBD7" stroke-width="2"/>
+  <text x="875" y="352" text-anchor="middle" class="h">안테나 중심부 단면 개념도</text>
+  <rect x="790" y="380" width="170" height="90" fill="#D9E5EC" stroke="#587486"/>
+  <rect x="842" y="380" width="66" height="122" fill="#FFFFFF" stroke="#587486"/>
+  <text x="980" y="420" class="b">내부 도체 651</text><text x="980" y="448" class="b">외부 도체 652</text>
+  <path d="M875 392V520" stroke="#C53932" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="875" cy="520" r="13" fill="#C53932"/>
+  <text x="700" y="440" class="b">열전대 80</text><path d="M785 435H856" stroke="#C53932" stroke-width="3" marker-end="url(#r)"/>
+  <rect x="818" y="502" width="114" height="45" rx="8" fill="#F4C8A8" stroke="#A85D28"/>
+  <text x="875" y="532" text-anchor="middle" class="b">커넥터 70</text>
+  <rect x="800" y="547" width="150" height="35" rx="6" fill="#E7B387" stroke="#A85D28"/>
+  <text x="875" y="571" text-anchor="middle" class="b">캡 72</text>
+  <rect x="735" y="582" width="280" height="20" fill="#9EC3D8"/><text x="1030" y="599" class="b">슬롯 안테나 62</text>
+  <rect x="735" y="602" width="280" height="25" fill="#CDECF3"/><text x="1030" y="625" class="b">투과판 61</text>
+
+  <rect x="60" y="330" width="505" height="280" rx="22" fill="#FFFFFF" stroke="#D8E1E7" stroke-width="2"/>
+  <text x="95" y="375" class="h">온도 신호가 만드는 안전 제어</text>
+  <rect x="95" y="415" width="155" height="65" rx="12" fill="#FFE6E3" stroke="#C53932"/>
+  <text x="173" y="455" text-anchor="middle" class="b">온도 측정 80</text>
+  <rect x="300" y="415" width="200" height="65" rx="12" fill="#FFE6E3" stroke="#C53932"/>
+  <text x="400" y="455" text-anchor="middle" class="b">이상 검출부 81</text>
+  <path d="M250 448H292" stroke="#C53932" stroke-width="4" marker-end="url(#r)"/>
+  <rect x="95" y="520" width="175" height="58" rx="12" fill="#FFF0C2" stroke="#D99A00"/>
+  <text x="183" y="556" text-anchor="middle" class="b">경고 발생부 82</text>
+  <rect x="325" y="520" width="175" height="58" rx="12" fill="#FFDAD7" stroke="#C53932"/>
+  <text x="413" y="545" text-anchor="middle" class="b">경보 83</text><text x="413" y="568" text-anchor="middle" class="b">+ 제어부 8 정지</text>
+  <path d="M365 480L220 512" stroke="#D99A00" stroke-width="3" marker-end="url(#a)"/><path d="M435 480L425 512" stroke="#C53932" stroke-width="3" marker-end="url(#r)"/>
+
+  <text x="60" y="715" class="s">원문 기반 재구성 · 축척 아님 · 출처: PDF pp.12-14, Figs. 4-5</text>
+</svg>

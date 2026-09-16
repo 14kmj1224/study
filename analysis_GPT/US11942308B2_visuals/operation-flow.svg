@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="720" viewBox="0 0 1300 720" role="img" aria-labelledby="title desc">
+  <title id="title">US11942308B2 실험 결과와 안전 제어</title>
+  <desc id="desc">2.5킬로와트와 3킬로와트에서 세 안테나의 최고 온도 및 예시 경고와 정지 기준</desc>
+  <defs>
+    <style>text{font-family:"Noto Sans CJK KR","Noto Sans KR","Malgun Gothic",Arial,sans-serif;fill:#172B3A}.t{font-size:32px;font-weight:700}.h{font-size:20px;font-weight:700}.b{font-size:17px}.s{font-size:14px;fill:#526A78}.axis{stroke:#738A98;stroke-width:2}.grid{stroke:#DCE5EA;stroke-width:1}</style>
+  </defs>
+  <rect width="1300" height="720" fill="#F7FAFC"/>
+  <text x="60" y="58" class="t">실험 결과: Ant-2의 온도 상승이 이상 방전에 앞서 나타남</text>
+  <text x="60" y="92" class="b" fill="#526A78">실시예 조건: 처리용기 475°C · 2 Torr · Ar/NH₃/H₂ · 안테나 냉각 80°C</text>
+
+  <g transform="translate(80 145)">
+    <text x="0" y="0" class="h">안테나 캡 부근 최고 온도</text>
+    <line x1="70" y1="370" x2="660" y2="370" class="axis"/><line x1="70" y1="30" x2="70" y2="370" class="axis"/>
+    <g class="grid"><line x1="70" y1="285" x2="660" y2="285"/><line x1="70" y1="200" x2="660" y2="200"/><line x1="70" y1="115" x2="660" y2="115"/><line x1="70" y1="30" x2="660" y2="30"/></g>
+    <g class="s"><text x="45" y="376">0</text><text x="35" y="291">50</text><text x="26" y="206">100</text><text x="26" y="121">150</text><text x="26" y="36">200</text></g>
+    <line x1="70" y1="115" x2="660" y2="115" stroke="#D99A00" stroke-width="3" stroke-dasharray="10 7"/>
+    <text x="450" y="104" class="b" fill="#8A5A00">경고 기준 150°C</text>
+
+    <rect x="125" y="207" width="46" height="163" fill="#8AB6CD"/><rect x="176" y="194" width="46" height="176" fill="#245678"/>
+    <text x="173" y="397" text-anchor="middle" class="b">Ant-1</text><text x="148" y="198" text-anchor="middle" class="s">95.9</text><text x="199" y="185" text-anchor="middle" class="s">103.4</text>
+    <rect x="300" y="168" width="46" height="202" fill="#8AB6CD"/><rect x="351" y="93" width="46" height="277" fill="#D8473F"/>
+    <text x="349" y="397" text-anchor="middle" class="b">Ant-2</text><text x="323" y="159" text-anchor="middle" class="s">119.1</text><text x="374" y="83" text-anchor="middle" class="h" fill="#B72D27">162.7</text>
+    <rect x="475" y="182" width="46" height="188" fill="#8AB6CD"/><rect x="526" y="167" width="46" height="203" fill="#245678"/>
+    <text x="524" y="397" text-anchor="middle" class="b">Ant-3</text><text x="498" y="173" text-anchor="middle" class="s">110.6</text><text x="549" y="158" text-anchor="middle" class="s">119.5</text>
+    <rect x="165" y="430" width="20" height="20" fill="#8AB6CD"/><text x="195" y="446" class="b">2.5 kW</text><rect x="320" y="430" width="20" height="20" fill="#245678"/><text x="350" y="446" class="b">3.0 kW</text>
+  </g>
+
+  <g transform="translate(820 145)">
+    <text x="0" y="0" class="h">실시예의 제어 판단</text>
+    <rect x="0" y="45" width="380" height="70" rx="16" fill="#E8F1F6" stroke="#7A9BAD"/>
+    <text x="190" y="87" text-anchor="middle" class="h">커넥터·캡 부근 온도 감시</text>
+    <path d="M190 115V155" stroke="#315A78" stroke-width="4"/>
+    <polygon points="190,150 202,168 178,168" fill="#315A78"/>
+    <rect x="0" y="170" width="380" height="78" rx="16" fill="#FFF0C2" stroke="#D99A00" stroke-width="2"/>
+    <text x="190" y="202" text-anchor="middle" class="b">150°C 초과 · 2초 이상</text><text x="190" y="232" text-anchor="middle" class="h" fill="#8A5A00">경고 · 공정 계속</text>
+    <path d="M190 248V288" stroke="#C53932" stroke-width="4"/>
+    <polygon points="190,283 202,301 178,301" fill="#C53932"/>
+    <rect x="0" y="303" width="380" height="86" rx="16" fill="#FFDAD7" stroke="#C53932" stroke-width="2"/>
+    <text x="190" y="337" text-anchor="middle" class="b">300°C 초과 · 2초 이상</text><text x="190" y="370" text-anchor="middle" class="h" fill="#B72D27">경보 + 플라즈마 정지</text>
+    <text x="0" y="430" class="s"><tspan x="0" dy="0">주의: 150°C와 300°C는 실시예 설정값이다.</tspan><tspan x="0" dy="24">청구항은 구체적인 수치를 필수로 제한하지 않는다.</tspan></text>
+  </g>
+
+  <rect x="80" y="625" width="1120" height="45" rx="10" fill="#173B57"/>
+  <text x="640" y="654" text-anchor="middle" class="b" style="fill:#FFFFFF">Ant-2는 3.0 kW에서 기준을 초과했고, 이후 이상 방전과 방전 흔적이 확인됨</text>
+  <text x="80" y="700" class="s">원문 기반 재구성 · 출처: PDF pp.13, 15-16, Fig. 6 · 막대값은 문서에 기재된 최고 온도</text>
+</svg>

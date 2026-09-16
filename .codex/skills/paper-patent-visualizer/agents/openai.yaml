@@ -1,0 +1,4 @@
+interface:
+  display_name: "논문 특허 시각화"
+  short_description: "논문·특허를 근거 기반 한국어 시각자료로 정리"
+  default_prompt: "Use $paper-patent-visualizer to analyze a PDF in papers and save a Korean Word report with source-grounded diagrams under analysis_GPT."
